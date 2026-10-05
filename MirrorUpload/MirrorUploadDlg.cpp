@@ -120,7 +120,7 @@ BOOL CMirrorUploadDlg::OnInitDialog()
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }
 
-void CMirrorUploadDlg::OnTimer(UINT nIDEvent) 
+void CMirrorUploadDlg::OnTimer(UINT_PTR nIDEvent) 
 {
 	bool bUploading = false;
 

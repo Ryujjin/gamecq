@@ -201,7 +201,7 @@ void CMainFrame::OnClose()
 	ShowWindow( SW_HIDE );
 }
 
-void CMainFrame::OnTimer(UINT nIDEvent)
+void CMainFrame::OnTimer(UINT_PTR nIDEvent)
 {
 	MetaClient & client = CGCQLApp::sm_MetaClient;
 

@@ -86,7 +86,7 @@ protected:
 	afx_msg void OnSelectProcess2(NMHDR* pNMHDR, LRESULT* pResult);
 	afx_msg void OnProcessLog2(NMHDR* pNMHDR, LRESULT* pResult);
 	afx_msg void OnSearchLogs();
-	afx_msg void OnTimer(UINT nIDEvent);
+	afx_msg void OnTimer(UINT_PTR nIDEvent);
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 };

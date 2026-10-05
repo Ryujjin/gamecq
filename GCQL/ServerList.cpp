@@ -263,7 +263,7 @@ void CServerList::sortServers()
 	GetListCtrl().SortItems( SortGameList, (dword)this );
 }
 
-void CServerList::OnTimer(UINT nIDEvent) 
+void CServerList::OnTimer(UINT_PTR nIDEvent) 
 {
 	if ( nIDEvent == m_RefreshTimer && IsWindowVisible() )
 	{

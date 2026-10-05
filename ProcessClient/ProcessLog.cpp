@@ -81,7 +81,7 @@ BOOL CProcessLog::OnInitDialog()
 	              // EXCEPTION: OCX Property Pages should return FALSE
 }
 
-void CProcessLog::OnTimer(UINT nIDEvent) 
+void CProcessLog::OnTimer(UINT_PTR nIDEvent) 
 {
 	if ( !m_Paused )
 	{

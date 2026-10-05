@@ -117,7 +117,7 @@ protected:
 	virtual void OnUpdate(CView* /*pSender*/, LPARAM /*lHint*/, CObject* /*pHint*/);
 public:
 	afx_msg void OnNMDblclk(NMHDR *pNMHDR, LRESULT *pResult);
-	afx_msg void OnTimer(UINT nIDEvent);
+	afx_msg void OnTimer(UINT_PTR nIDEvent);
 	afx_msg void OnGamesInstall();
 	afx_msg void OnUpdateGamesInstall(CCmdUI *pCmdUI);
 	afx_msg void OnGamesLaunch();

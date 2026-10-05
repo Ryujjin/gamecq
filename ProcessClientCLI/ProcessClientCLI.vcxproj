@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="DebugLinux|Win32">
@@ -17,34 +17,72 @@
       <Configuration>Release</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="DebugLinux|x64">
+      <Configuration>DebugLinux</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseLinux|x64">
+      <Configuration>ReleaseLinux</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{767F7C0A-3C1F-4AEC-B64E-F986B67DB411}</ProjectGuid>
     <RootNamespace>ProcessClientCLI</RootNamespace>
     <Keyword>Win32Proj</Keyword>
-    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v145</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugLinux|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v145</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v145</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v145</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -53,13 +91,25 @@
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugLinux|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
@@ -72,7 +122,18 @@
     <LinkIncremental>true</LinkIncremental>
     <TargetName>$(ProjectName)D</TargetName>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>..\Bin\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName)D</TargetName>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\Bin\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>..\Bin\</OutDir>
     <IntDir>$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
@@ -83,7 +144,18 @@
     <LinkIncremental>true</LinkIncremental>
     <TargetName>$(ProjectName)D</TargetName>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugLinux|x64'">
+    <OutDir>$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName)D</TargetName>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">
+    <OutDir>$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|x64'">
     <OutDir>$(Configuration)\</OutDir>
     <IntDir>$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
@@ -105,6 +177,23 @@
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
   </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../../Medusa;..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <AdditionalIncludeDirectories>../../Medusa;..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -120,6 +209,23 @@
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../Medusa;..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX64</TargetMachine>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">
@@ -140,6 +246,24 @@
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
   </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugLinux|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../../Medusa;..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">
     <ClCompile>
       <AdditionalIncludeDirectories>../../Medusa;..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -155,6 +279,23 @@
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../Medusa;..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX64</TargetMachine>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -180,129 +321,243 @@
   <ItemGroup>
     <CustomBuild Include="..\..\Medusa\Bin\GCQ.dll">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">true</ExcludedFromBuild>
-      <Message Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">copy %(FullPath) $(OutDir)</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">copy %(FullPath) $(OutDir)
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugLinux|x64'">true</ExcludedFromBuild>
+      <Message Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='DebugLinux|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='DebugLinux|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='DebugLinux|x64'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">copy %(FullPath) $(OutDir)</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">copy %(FullPath) $(OutDir)
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">true</ExcludedFromBuild>
-      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">copy %(FullPath) $(OutDir)</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">copy %(FullPath) $(OutDir)
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|x64'">true</ExcludedFromBuild>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">copy %(FullPath) $(OutDir)</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">copy %(FullPath) $(OutDir)
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|x64'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="..\..\Medusa\Bin\GCQD.dll">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">true</ExcludedFromBuild>
-      <Message Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">copy %(FullPath) $(OutDir)</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">copy %(FullPath) $(OutDir)
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugLinux|x64'">true</ExcludedFromBuild>
+      <Message Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='DebugLinux|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='DebugLinux|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">copy %(FullPath) $(OutDir)</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">copy %(FullPath) $(OutDir)
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='DebugLinux|x64'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">true</ExcludedFromBuild>
-      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">copy %(FullPath) $(OutDir)</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">copy %(FullPath) $(OutDir)
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|x64'">true</ExcludedFromBuild>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">copy %(FullPath) $(OutDir)</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">copy %(FullPath) $(OutDir)
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|x64'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="..\..\Medusa\Bin\Medusa.dll">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">true</ExcludedFromBuild>
-      <Message Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">copy %(FullPath) $(OutDir)</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">copy %(FullPath) $(OutDir)
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugLinux|x64'">true</ExcludedFromBuild>
+      <Message Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='DebugLinux|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='DebugLinux|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='DebugLinux|x64'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">copy %(FullPath) $(OutDir)</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">copy %(FullPath) $(OutDir)
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">true</ExcludedFromBuild>
-      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">copy %(FullPath) $(OutDir)</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">copy %(FullPath) $(OutDir)
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|x64'">true</ExcludedFromBuild>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">copy %(FullPath) $(OutDir)</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">copy %(FullPath) $(OutDir)
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|x64'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="..\..\Medusa\Bin\MedusaD.dll">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">true</ExcludedFromBuild>
-      <Message Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">copy %(FullPath) $(OutDir)</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">copy %(FullPath) $(OutDir)
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugLinux|x64'">true</ExcludedFromBuild>
+      <Message Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='DebugLinux|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='DebugLinux|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">copy %(FullPath) $(OutDir)</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">copy %(FullPath) $(OutDir)
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='DebugLinux|x64'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">true</ExcludedFromBuild>
-      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">copy %(FullPath) $(OutDir)</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">copy %(FullPath) $(OutDir)
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|x64'">true</ExcludedFromBuild>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|x64'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">copy %(FullPath) $(OutDir)</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">copy %(FullPath) $(OutDir)
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="..\..\Medusa\Bin\Network.dll">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">true</ExcludedFromBuild>
-      <Message Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">copy %(FullPath) $(OutDir)</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">copy %(FullPath) $(OutDir)
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugLinux|x64'">true</ExcludedFromBuild>
+      <Message Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='DebugLinux|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='DebugLinux|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='DebugLinux|x64'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">copy %(FullPath) $(OutDir)</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">copy %(FullPath) $(OutDir)
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">true</ExcludedFromBuild>
-      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">copy %(FullPath) $(OutDir)</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">copy %(FullPath) $(OutDir)
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|x64'">true</ExcludedFromBuild>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">copy %(FullPath) $(OutDir)</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">copy %(FullPath) $(OutDir)
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|x64'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="..\..\Medusa\Bin\NetworkD.dll">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">true</ExcludedFromBuild>
-      <Message Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">copy %(FullPath) $(OutDir)</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">copy %(FullPath) $(OutDir)
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugLinux|x64'">true</ExcludedFromBuild>
+      <Message Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='DebugLinux|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='DebugLinux|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">copy %(FullPath) $(OutDir)</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">copy %(FullPath) $(OutDir)
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='DebugLinux|x64'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">true</ExcludedFromBuild>
-      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">copy %(FullPath) $(OutDir)</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">copy %(FullPath) $(OutDir)
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|x64'">true</ExcludedFromBuild>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|x64'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">copy %(FullPath) $(OutDir)</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">copy %(FullPath) $(OutDir)
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">if exist "%(FullPath)" cmd /c copy /Y "%(FullPath)" "$(OutDir)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
     </CustomBuild>
     <None Include="makefile" />
     <None Include="TestCLI.ini" />

@@ -95,23 +95,35 @@ void MetaServer::onReceive( dword clientId, byte message, const InStream & input
 				if( validateMID( mid ) )
 				{
 					LOG_STATUS( "MetaServer", CharString().format("Client %u login, id = %s", clientId, id.cstr() ) );
-					
+
 					CharString find( addSlash( id ) );
 
 					// get all username/loginname matches from the database
 					Database * pDB = getConnection();
 					Database::Query result = pDB->query( CharString().format( "SELECT user_id, user_password, user_newpasswd FROM users WHERE loginname='%s' OR username='%s'", 
 						find.cstr(), find.cstr() ) );
-					
+
+					// DIAGNOSTIC: log row count and client-sent hash so we can trace mismatches
+					LOG_STATUS( "MetaServer", "AUTH_DIAG client %u id='%s' db_rows=%d client_md5=%s",
+						clientId, id.cstr(), result.rows(), md5.cstr() );
+
 					// get the clients public key
 					CharString publicKey( getPublicKey( clientId ) );
+
+					// DIAGNOSTIC: log public key used for this session
+					LOG_STATUS( "MetaServer", "AUTH_DIAG client %u publicKey=%s", clientId, publicKey.cstr() );
+
 					// find the userId
 					dword userId = 0;
 					for(int i=0;i<result.rows() && userId == 0;i++)
 					{
 						CharString password = (const char *)result[i][1];
 						CharString trueMD5 = MD5( publicKey + password ).checksum();
-						
+
+						// DIAGNOSTIC: log stored password and computed hash so mismatch is visible
+						LOG_STATUS( "MetaServer", "AUTH_DIAG client %u row=%d stored_pw='%s' (len=%d) server_md5=%s match=%s",
+							clientId, i, password.cstr(), password.length(), trueMD5.cstr(), (md5 == trueMD5) ? "YES" : "NO" );
+
 						// found a username match, check the passwords!
 						if ( md5 == trueMD5 )
 						{
@@ -135,7 +147,7 @@ void MetaServer::onReceive( dword clientId, byte message, const InStream & input
 							}
 						}
 					}
-					
+
 					freeConnection( pDB );
 
 					if( userId == 0 )
@@ -1545,13 +1557,13 @@ void MetaServer::onReceive( dword clientId, byte message, const InStream & input
 				query.format("SELECT rooms.*, COUNT(user_status.hidden) as members "
 					"FROM rooms LEFT JOIN room_members ON rooms.room_id = room_members.room_id "
 					"LEFT JOIN user_status ON user_status.user_id = room_members.user_id AND user_status.hidden = 0 "
-					"WHERE game_id=%u GROUP BY name", gameId );
+					"WHERE game_id=%u GROUP BY rooms.room_id", gameId );
 			}
 			else
 			{
 				query.format("SELECT rooms.*, COUNT(room_members.room_id) as members "
 					"FROM rooms LEFT JOIN room_members ON rooms.room_id = room_members.room_id "
-					"WHERE game_id=%u GROUP BY name", gameId );
+					"WHERE game_id=%u GROUP BY rooms.room_id", gameId );
 			}
 							
 			Database::Query rows( pDB->query( query ) );

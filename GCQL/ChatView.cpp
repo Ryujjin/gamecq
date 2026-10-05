@@ -117,7 +117,7 @@ int CChatView::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	return 0;
 }
 
-void CChatView::OnTimer(UINT nIDEvent) 
+void CChatView::OnTimer(UINT_PTR nIDEvent) 
 {
 	CChatFrame * pFrame = (CChatFrame *)GetParentFrame();
 

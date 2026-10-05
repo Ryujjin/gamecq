@@ -422,7 +422,7 @@ void CProcessServer::OnSearchLogs()
 	CProcessSearchLogs( &m_Client, this ).DoModal();
 }
 
-void CProcessServer::OnTimer(UINT nIDEvent) 
+void CProcessServer::OnTimer(UINT_PTR nIDEvent) 
 {
 	OnUpdate();
 	//CDialog::OnTimer(nIDEvent);

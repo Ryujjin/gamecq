@@ -186,7 +186,7 @@ BOOL CProgressDlg::OnInitDialog()
     return TRUE;  
 }
 
-void CProgressDlg::OnTimer(UINT nIDEvent) 
+void CProgressDlg::OnTimer(UINT_PTR nIDEvent) 
 {
 	StepIt();
 	//CDialog::OnTimer(nIDEvent);

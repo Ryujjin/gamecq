@@ -466,27 +466,7 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="res\empty_ht.htm">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="res\GCQL.rc2">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="GCQL.clw" />
-    <None Include="GCQL.reg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Xml Include="AdminRights.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="Eula.txt" />
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <CustomBuild Include="res\caption.bmp">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="res\GCQL.exe.manifest">
       <Filter>Resource Files</Filter>
     </CustomBuild>
     <CustomBuild Include="Skins\Blue.skn">
@@ -532,12 +512,6 @@
       <Filter>Libs</Filter>
     </CustomBuild>
     <CustomBuild Include="..\..\Medusa\Bin\SelfUpdateD.dll">
-      <Filter>Libs</Filter>
-    </CustomBuild>
-    <CustomBuild Include="..\ThirdParty\tinyxml\lib\tinyxml.lib">
-      <Filter>Libs</Filter>
-    </CustomBuild>
-    <CustomBuild Include="..\ThirdParty\tinyxml\lib\tinyxmlD.lib">
       <Filter>Libs</Filter>
     </CustomBuild>
     <CustomBuild Include="config.ini" />

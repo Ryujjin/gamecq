@@ -181,7 +181,7 @@ BOOL CChatFrame::OnCmdMsg(UINT nID, int nCode, void* pExtra, AFX_CMDHANDLERINFO*
 	return CFrameWnd::OnCmdMsg(nID, nCode, pExtra, pHandlerInfo);
 }
 
-void CChatFrame::OnTimer(UINT nIDEvent)
+void CChatFrame::OnTimer(UINT_PTR nIDEvent)
 {
 	if ( nIDEvent == 0x1 )
 	{

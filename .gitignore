@@ -1,6 +1,11 @@
 Bin/
 Build/
 config.ini
+Debug/
+Release/
+x64/
+Debug80/
+Release80/
 *.ncb
 *.obj
 BuildLog.htm

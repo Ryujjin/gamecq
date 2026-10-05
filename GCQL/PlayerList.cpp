@@ -166,7 +166,7 @@ int CALLBACK SortPlayerList(LPARAM lParam1, LPARAM lParam2, LPARAM lParamSort)
 	return player1.name.compareNoCase( player2.name );
 }
 
-void CPlayerList::OnTimer(UINT nIDEvent) 
+void CPlayerList::OnTimer(UINT_PTR nIDEvent) 
 {
 	MetaClient & client = CGCQLApp::sm_MetaClient;
 	int oldItemCount = GetItemCount();

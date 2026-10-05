@@ -56,7 +56,7 @@ protected:
 	// Generated message map functions
 	//{{AFX_MSG(CProcessLog)
 	virtual BOOL OnInitDialog();
-	afx_msg void OnTimer(UINT nIDEvent);
+	afx_msg void OnTimer(UINT_PTR nIDEvent);
 	afx_msg void OnClose();
 	afx_msg void OnCloseFile();
 	afx_msg void OnSaveFile();

@@ -70,7 +70,7 @@ protected:
 	// Generated message map functions
 	//{{AFX_MSG(CMirrorUploadDlg)
 	virtual BOOL OnInitDialog();
-	afx_msg void OnTimer(UINT nIDEvent);
+	afx_msg void OnTimer(UINT_PTR nIDEvent);
 	afx_msg void OnNewProfile();
 	afx_msg void OnDeleteProfile();
 	afx_msg void OnUpload();

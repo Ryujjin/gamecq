@@ -438,7 +438,7 @@ void CCacheList::OnInitialUpdate()
 void CCacheList::OnUpdate(CView* /*pSender*/, LPARAM /*lHint*/, CObject* /*pHint*/)
 {}
 
-void CCacheList::OnTimer(UINT nIDEvent)
+void CCacheList::OnTimer(UINT_PTR nIDEvent)
 {
 	if ( nIDEvent == 0x7 )
 	{

@@ -37,7 +37,7 @@ public:
 	afx_msg void OnShowWindow(BOOL bShow, UINT nStatus);
 	afx_msg void OnSize(UINT nType, int cx, int cy);
 	afx_msg void OnClose();
-	afx_msg void OnTimer(UINT nIDEvent);
+	afx_msg void OnTimer(UINT_PTR nIDEvent);
 	afx_msg LRESULT OnGCQLCommand(WPARAM, LPARAM);
 
 	virtual LRESULT WindowProc(UINT message, WPARAM wParam, LPARAM lParam);
